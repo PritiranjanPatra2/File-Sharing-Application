@@ -12,7 +12,7 @@ const File = () => {
   useEffect(() => {
     const fetchFiles = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/files");
+        const response = await axios.get("https://file-sharing-application-7v1t.onrender.com/files");
         setAllFiles(response.data);
       } catch (err) {
         console.error("Error fetching files:", err);
@@ -42,7 +42,7 @@ const File = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/submit-form",
+        "https://file-sharing-application-7v1t.onrender.com/submit-form",
         formData,
         {
           headers: {
